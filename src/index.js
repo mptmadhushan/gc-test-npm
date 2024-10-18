@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './styles.module.css'
+import React from 'react';
+import DataList from './DataList';
+import { myApi } from './api'; // Import myApi
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export const MyDataList = () => <DataList />;
+export { myApi }; // Export the API slice
