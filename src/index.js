@@ -1,6 +1,4 @@
-import React from 'react';
-import DataList from './DataList';
-import { myApi } from './api'; // Import myApi
+import { myApi } from './api/api'
 
-export const MyDataList = () => <DataList />;
-export { myApi }; // Export the API slice
+export { default as DocumentEditorComponent } from './components/DocumentEditor';
+export { myApi }
