@@ -154,7 +154,11 @@ console.log("🍺 - bebz - 🚀 ~ file: DocumentEditor.js:29 ~ OnlyOfficeEditor 
                   },
                   documentType: "word",
                   editorConfig: {
-                    callbackUrl: `${devUrl}/url-to-callback`,
+                    callbackUrl: `${devUrl}/track`,
+                    user: {
+                        id: "user-1",
+                        name: "Test User",
+                      },
                   },
                 }}
                 events_onDocumentReady={onDocumentReady}
