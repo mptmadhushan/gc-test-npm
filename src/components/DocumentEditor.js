@@ -19,8 +19,8 @@ const OnlyOfficeEditor = ({ devUrl }) => {
   const [fileName, setFileName] = useState("");
   const [open, setOpen] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState([]);
-  const [loading, setLoading] = useState(false); // State to manage loading
-  const [editorError, setEditorError] = useState(null); // State for error messages
+  const [loading, setLoading] = useState(false); 
+  const [editorError, setEditorError] = useState(null); 
 
   useEffect(() => {
     // Load uploaded files from local storage
@@ -33,7 +33,7 @@ const OnlyOfficeEditor = ({ devUrl }) => {
     if (file) {
       const formData = new FormData();
       formData.append("file", file);
-      setLoading(true); // Start loading
+      setLoading(true);
 
       fetch(`${devUrl}/upload`, {
         method: "POST",
@@ -62,10 +62,10 @@ const OnlyOfficeEditor = ({ devUrl }) => {
         })
         .catch((error) => {
           console.error("Error uploading file:", error);
-          setEditorError("Error uploading file. Please try again."); // Set error message
+          setEditorError("Error uploading file. Please try again."); 
         })
         .finally(() => {
-          setLoading(false); // Stop loading
+          setLoading(false); 
         });
     }
   };
@@ -79,7 +79,7 @@ const OnlyOfficeEditor = ({ devUrl }) => {
 
   const onLoadComponentError = (errorCode, errorDescription) => {
     console.error("Error loading component:", errorDescription);
-    setEditorError(`Error loading document: ${errorDescription}`); // Set error message
+    setEditorError(`Error loading document: ${errorDescription}`);
   };
 
   const onDocumentReady = () => {
